@@ -43,7 +43,7 @@ def RMSE(data):  # source - https://rramnauth2220.github.io/blog/posts/code/2005
 
     # compute RMSE over frames
     rmse = librosa.feature.rms(
-        data, frame_length=frame_length, hop_length=hop_length, center=True)
+        y=data, frame_length=frame_length, hop_length=hop_length, center=True)
     rmse.shape
     rmse = rmse[0]
     return rmse
