@@ -53,6 +53,7 @@ def RMSE(data):  # source - https://rramnauth2220.github.io/blog/posts/code/2005
 
 def mel_sync(M, beats, plot=False):
     # feature.sync will summarize each beat event by the mean feature vector within that beat
+    beats = beats.astype(int)
     M_sync = librosa.util.sync(M, beats)
     if plot:
         plt.figure(figsize=(12, 6))
