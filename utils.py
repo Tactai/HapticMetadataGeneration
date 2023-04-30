@@ -96,7 +96,7 @@ def beat_sync_chroma(C, beats, samplerate, plot=False):
 
 
 def melspect(data, samplerate, plot=False, title='mel power spectrogram'):
-    S = librosa.feature.melspectrogram(data, sr=samplerate, n_mels=128)
+    S = librosa.feature.melspectrogram(y=data, sr=samplerate, n_mels=128)
     log_S = librosa.power_to_db(S, ref=np.max)
     if plot:
         plt.figure(figsize=(12, 4))
